@@ -10,11 +10,14 @@
   --logo-main-color: #2196f3;
   --header-border-color: #ececec;
   --header-logo-secondary-color: #212121;
+  --bg-overlay-dark: rgba(47, 48, 58, 0.4);
   --btn-shadow-color: rgba(0, 0, 0, 0.15);
   --card-shadow-primary-color: rgba(0, 0, 0, 0.12);
   --card-shadow-secondary-color: rgba(0, 0, 0, 0.2);
   --portfolio-card-border-color: #eeeeee;
   --accent-color: #2196f3;
+  --icon-color: #afb1b8;
+  --footer-bg-icon-primary-color: rgba(255, 255, 255, 0.1);
   --card-set-gap: 30px;
 }
 
@@ -92,7 +95,6 @@ address {
 
 .contacts-list {
   display: flex;
-  text-align: center;
   margin-left: auto;
 }
 .contacts-list-item:first-child {
@@ -148,6 +150,9 @@ address {
 /* ========= END HEADER =========*/
 /* ========= START HERO =========*/
 .hero {
+  background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)),
+    url(../images/hero-bg.jpg);
+  background-size: cover;
   background-color: var(--primary-background-color-theme-dark);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -248,7 +253,7 @@ address {
 }
 
 .team-text-content {
-  padding: 30px 58px;
+  padding: 30px 32px;
 }
 
 .team-list-title {
@@ -261,6 +266,7 @@ address {
   color: var(--secondary-text-color-theme-dark);
 }
 .team-list-description {
+  margin-bottom: 16px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.19;
@@ -268,6 +274,32 @@ address {
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-dark);
 }
+.social-list {
+  display: flex;
+  justify-content: space-between;
+}
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-list-icon {
+  fill: var(--icon-color);
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--primary-text-color-theme-light);
+}
+
 /* ========= END OUR TEAM =========*/
 
 /* ========= START FOOTER =========*/
@@ -306,6 +338,35 @@ address {
 .address-list-contacts {
   color: var(--secondary-text-color-theme-light);
 }
+.footer-container {
+  display: flex;
+}
+.footer-address-info {
+  margin-right: 70px;
+}
+.footer-social-info {
+  padding-top: 12px;
+}
+.footer-social-info-title {
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-text-color-theme-light);
+}
+
+.footer-social-list-icon {
+  fill: var(--primary-text-color-theme-light);
+}
+.footer-social-list-link {
+  background-color: var(--footer-bg-icon-primary-color);
+}
+footer .social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
 /* ========= END FOOTER =========*/
 
 /* ========= START PORTFOLIO FILTER =========*/
