@@ -349,7 +349,6 @@ address {
   justify-content: space-between;
 }
 .clients-list-item {
-  flex-basis: 100% / 6;
   padding: 16px 32px;
   border: 1px solid var(--icon-color);
   border-radius: 4px;
