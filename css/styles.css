@@ -138,14 +138,26 @@ address {
   color: var(--accent-color);
 }
 .contacts-list-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   padding-top: 32px;
   padding-bottom: 32px;
 
   color: var(--primary-text-color-theme-dark);
 }
+.contacts-list-info > svg {
+  margin-right: 10px;
+  fill: var(--primary-text-color-theme-dark);
+}
 .contacts-list-info:hover,
 .contacts-list-info:focus {
   color: var(--accent-color);
+}
+.contacts-list-info:hover > svg,
+.contacts-list-info:focus > svg {
+  fill: var(--accent-color);
 }
 /* ========= END HEADER =========*/
 /* ========= START HERO =========*/
@@ -192,15 +204,38 @@ address {
 }
 /* END HERO */
 /* START FEATURES */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+
 .features-list {
   display: flex;
   flex-wrap: wrap;
   margin-left: calc(-1 * var(--card-set-gap));
 }
+
+.features-list-icon {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-bottom: var(--card-set-gap);
+  text-align: center;
+
+  background-color: var(--secondary-background-color-theme-light);
+  border-radius: 4px;
+}
+
 .features-list-item {
   flex-basis: calc(100% / 4 - 30px);
   margin-left: var(--card-set-gap);
 }
+
 .features-list-title {
   margin-bottom: 10px;
   font-weight: 700;
@@ -210,6 +245,7 @@ address {
   text-transform: uppercase;
   color: var(--secondary-text-color-theme-dark);
 }
+
 .features-list-description {
   font-weight: 400;
   font-size: 14px;
@@ -217,6 +253,7 @@ address {
   letter-spacing: 0.03em;
   color: var(--primary-text-color-theme-dark);
 }
+
 /*END FEATURES */
 
 /* START RESPONSIBILITIES */
@@ -301,6 +338,31 @@ address {
 }
 
 /* ========= END OUR TEAM =========*/
+
+/* ========= START CLIENTS =========*/
+.client {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.clients-list {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-list-item {
+  flex-basis: 100% / 6;
+  padding: 16px 32px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+.clients-list-logo {
+  fill: var(--icon-color);
+}
+.clients-list-link:hover .clients-list-logo,
+.clients-list-link:focus .clients-list-logo {
+  fill: var(--accent-color);
+}
+
+/* ========= END CLIENTS =========*/
 
 /* ========= START FOOTER =========*/
 .footer {
