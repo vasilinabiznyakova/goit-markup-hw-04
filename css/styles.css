@@ -165,6 +165,8 @@ address {
   background-image: linear-gradient(var(--bg-overlay-dark), var(--bg-overlay-dark)),
     url(../images/hero-bg.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   background-color: var(--primary-background-color-theme-dark);
   padding-top: 200px;
   padding-bottom: 200px;
@@ -202,6 +204,10 @@ address {
   box-shadow: 0px 4px 4px var(--btn-shadow-color);
   background-color: var(--accent-color);
 }
+.hero-btn:hover,
+.hero-btn:focus {
+  background: #188ce8;
+}
 /* END HERO */
 /* START FEATURES */
 .visually-hidden {
@@ -222,6 +228,9 @@ address {
 }
 
 .features-list-icon {
+  width: 270px;
+  height: 120px;
+
   padding-top: 25px;
   padding-bottom: 25px;
   margin-bottom: var(--card-set-gap);
@@ -349,13 +358,30 @@ address {
   justify-content: space-between;
 }
 .clients-list-item {
-  padding: 16px 32px;
+  width: 170px;
+  height: 92px;
+
   border: 1px solid var(--icon-color);
   border-radius: 4px;
 }
 .clients-list-logo {
   fill: var(--icon-color);
 }
+.clients-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.clients-list-logo {
+  display: block;
+}
+.clients-list-item:hover,
+.clients-list-item:focus {
+  border-color: var(--accent-color);
+}
+
 .clients-list-link:hover .clients-list-logo,
 .clients-list-link:focus .clients-list-logo {
   fill: var(--accent-color);
@@ -401,14 +427,14 @@ address {
 }
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 .footer-address-info {
   margin-right: 70px;
 }
-.footer-social-info {
-  padding-top: 12px;
-}
+
 .footer-social-info-title {
+  display: block;
   margin-bottom: 20px;
   font-weight: 700;
   font-size: 14px;
@@ -467,6 +493,8 @@ footer .social-list-item:not(:last-child) {
 .filter-item-btn:focus {
   color: var(--primary-text-color-theme-light);
   background-color: var(--accent-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
   cursor: pointer;
 }
 /* END PORTFOLIO FILTER */
@@ -490,7 +518,14 @@ footer .social-list-item:not(:last-child) {
   border: 1px solid var(--portfolio-card-border-color);
   border-top: none;
 }
-.samples-list-title {
+
+.samples-list-link:hover,
+.samples-list-link:focus {
+  display: block;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-card-info .samples-list-title {
   margin-bottom: 4px;
 
   font-weight: 700;
